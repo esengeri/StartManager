@@ -2,3 +2,4 @@ Plaintext
 venv\
 *.рус
 __pycanche__/
+secret_key.txt
