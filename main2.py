@@ -8,7 +8,7 @@ init()
 def main():
     print(Fore.GREEN)
     a = str(input("you name:"))
-    tprint(a)
+    tprint()
     print(Style.RESET_ALL)
 
     current_time = datetime.now().strftime("%H:%M:%S")
