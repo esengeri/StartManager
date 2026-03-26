@@ -2,13 +2,20 @@ import os
 from datetime import datetime
 from colorama import Fore, Style, init
 from art import tprint
+import logging
+logging.basicConfig(
+    filename='app.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    encoding='utf-8'
+)
 
 init()
 
 def main():
     print(Fore.GREEN)
     a = str(input("you name:"))
-    tprint()
+    tprint(a)
     print(Style.RESET_ALL)
 
     current_time = datetime.now().strftime("%H:%M:%S")
