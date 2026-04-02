@@ -26,9 +26,8 @@ jobs:
 
     - name: Проверка качества кода (Статический анализ)
       run: |
-        # Первое: проверка на критические ошибки (Синтаксические ошибки)
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        
-        # Второе: проверка на стилистические ошибки (соответствие PEP 8)
-        # --exit-zero позволяет пайплайну продолжаться даже при наличии предупреждений
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        # Критические ошибки
+        flake8 . --exclude=venv,__pycache__,.git --count --select=E9,F63,F7,F82 --show-source --statistics
+    
+        # Стиль
+        flake8 . --exclude=venv,__pycache__,.git --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
