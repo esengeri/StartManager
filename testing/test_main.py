@@ -1,5 +1,5 @@
 import unittest
-from main import add, divide, is_even
+from .main import add, divide, is_even
 
 class TestMyCode(unittest.TestCase):
 
